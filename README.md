@@ -16,10 +16,10 @@ NOTE: Database is SQLite3 via SQLAlchemy
 2. Install Python ( https://realpython.com/installing-python/ )
 3. Install pipenv: `pip3 install --user pipenv`.
    - Python version 3.6 or higher is required
-4. Seed the database
-   - Run: `python seed_db.py`
-   - To re-seed the database from scratch, delete data.db before running the script
-   - Look for the file data.db to be created in the root directory
+4. Database functions
+   - Create & Seed: `python manage.py create`
+   - Recreate:      `python manage.py recreate`
+   - Drop:          `python manage.py drop`
    - If you get the error `ImportError: No module named flask` or similar, you may need to run `pipenv shell` to launch virtual environment.
 5. Run `pipenv install`
    - If you get the error `ImportError: cannot import name 'Feature' from 'setuptools'`, your setuptools version might be at 46 or later. You may be able to get it to work using version 45 (e.g. `pip3 install setuptools==45`)
@@ -57,7 +57,7 @@ If you are still having issues or if your command prompt is throwing an error th
 3. Install pipenv: `pip3 install --user pipenv`
 4. Shell into the environment configured by your Pipfile `pipenv shell`
   - This brings you into a partitioned environment set up to spec with your Pipfile. Often people who skip this step will have path and version errors.
-5. Run: `python seed_db.py`
+5. Run: `python manage.py create`
 6. Run: `pipenv run flask run`
 7. Login using one of the accounts below and you should be good to go!
 

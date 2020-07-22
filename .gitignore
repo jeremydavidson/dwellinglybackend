@@ -130,3 +130,6 @@ dmypy.json
 
 variable.cfg
 data.db
+
+# Jetbrains pyCharm ide
+.idea
